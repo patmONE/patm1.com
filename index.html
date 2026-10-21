@@ -3,50 +3,155 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Patrick · PM1 homelab</title>
-<meta name="description" content="Patrick's personal site and the home of PM1 Home Assistant, a personal app used only by him.">
-<link rel="stylesheet" href="/style.css">
+<title>Patrick Magpantay · Network Architect</title>
+<meta name="description" content="Patrick Magpantay, Network Architect: infrastructure, automation and AI-assisted operations.">
+<meta name="color-scheme" content="dark">
+<link rel="stylesheet" href="/site.css">
 </head>
 <body>
 <header class="wrap bar">
   <a class="mark" href="/">patm1.com</a>
   <nav aria-label="Main">
-    <a href="#app">The app</a>
-    <a href="/privacy.html">Privacy</a>
+    <a href="#experience">Experience</a>
+    <a href="#lab">Home Lab</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
 <main>
-  <section class="wrap hero">
-    <h1>Patrick runs the PM1 homelab</h1>
-    <p>This is my personal site. My home lab, called PM1, runs my smart home, my backups and my own tools.</p>
+  <section id="home" aria-label="Home">
+    <div class="wrap hero">
+      <h1>Patrick Magpantay</h1>
+      <p class="role">Network Architect | Infrastructure, Automation, AI-assisted Operations</p>
+      <p class="lead">20 years building and running infrastructure. Today I design the network that keeps a hospital running, where uptime is patient care.</p>
+      <blockquote><b lang="la">“Aut inveniam viam aut faciam”</b> — I will find a way, or make one.</blockquote>
+    </div>
+    <div class="status">
+      <dl class="wrap">
+        <div><dt>Building infrastructure</dt><dd><span aria-hidden="true"></span>20 years</dd></div>
+        <div><dt>Hospital users</dt><dd>~1,000</dd></div>
+        <div><dt>Hospital devices</dt><dd>1,200+</dd></div>
+        <div><dt>Cisco Live 2026</dt><dd>Top 10</dd></div>
+      </dl>
+    </div>
   </section>
 
-  <section class="app" id="app" aria-labelledby="app-title">
+  <section class="section" id="experience" aria-labelledby="experience-title">
+    <div class="wrap">
+      <h2 id="experience-title">Experience</h2>
+
+      <article class="job lead-job">
+        <div>
+          <h3>Fulton County Health Center</h3>
+          <p class="meta">Wauseon, Ohio · Nov 2023 – present
+            <strong>IS Network Architect (Oct 2025 – present)</strong>
+            <strong>Systems Network Engineer (Nov 2023 – Oct 2025)</strong></p>
+        </div>
+        <div>
+          <p class="scope">Community hospital system: main campus, long-term care and outpatient clinics. About 1,000 users and 1,200+ devices. IS team of about a dozen.</p>
+          <ul>
+            <li>Led a reliability design review of the Cisco Nexus data center core.</li>
+            <li>Operate the hospital's enterprise firewalls and remote connectivity.</li>
+            <li>Clinical wireless: improved operating-room Wi-Fi and Vocera badge coverage (every reading -58 dBm or better). Automated nightly access point maintenance with the Meraki API.</li>
+            <li>Clinical apps: worked with the vendor to cut a cardiology imaging app's startup to about 6-7 seconds.</li>
+            <li>Clinical systems: led reconnecting the hospital's temperature-monitoring sensors, keeping the PC replacement project on schedule.</li>
+            <li>Identity: modernized Active Directory authentication ahead of a Microsoft security change, with no service impact.</li>
+            <li>Linux: upgraded 4 clinical web servers to current Ubuntu LTS and automated certificate monitoring.</li>
+            <li>Fleet: software rollout across ~700 Windows PCs and virtual desktops with Group Policy and endpoint management.</li>
+            <li>Microsoft 365: Exchange hybrid and Entra ID. Redesigned encrypted-email notices; they were shared with hospital leadership, and related tickets dropped to zero in the next 5 weeks.</li>
+            <li>AI: helped lead the hospital's AI program — in-house AI platform for staff, AI governance and vendor reviews. Led the rollout of an AI clinical reference tool for providers.</li>
+            <li>Built a private, read-only AI operations assistant (Claude Code): searchable knowledge base of configs, cases and lessons learned, with live read-only Meraki and Microsoft 365 data.</li>
+            <li>Leadership: led the IS team while the CIO and a senior peer were both out. Present regularly to hospital leadership. Trained desktop technicians on endpoint management and wrote their knowledge-base articles.</li>
+          </ul>
+          <p class="award"><span>Recognition:</span> Top 10, networking leaderboard contest, Cisco Live 2026.</p>
+        </div>
+      </article>
+
+      <article class="job">
+        <div>
+          <h3>Dakotech</h3>
+          <p class="meta">Ann Arbor, MI · Sep 2022 – Jul 2023<strong>Cloud Engineer</strong></p>
+        </div>
+        <ul>
+          <li>Supported 125 client companies across 10 states: Microsoft 365, Azure AD, Windows and Linux servers, Hyper-V, Citrix, Meraki/SonicWall/pfSense firewalls, Duo MFA, Veeam.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div>
+          <h3>Spa Wherever You Are</h3>
+          <p class="meta">Philippines · Aug 2019 – Mar 2021<strong>System Administrator</strong></p>
+        </div>
+        <ul>
+          <li>Ran web infrastructure on Docker and Kubernetes; automated with Ansible and Terraform; monitored with Prometheus and Grafana.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div>
+          <h3>Congress of the Philippines</h3>
+          <p class="meta">Jun 2013 – Jun 2019<strong>Cyber Security Analyst</strong></p>
+        </div>
+        <ul>
+          <li>Security assessments and penetration testing; security policy and staff training for a government environment.</li>
+        </ul>
+      </article>
+
+      <article class="job">
+        <div>
+          <h3>Digitalbro</h3>
+          <p class="meta">Philippines<strong>System Administrator (2011 – 2013)</strong><strong>Web Developer (2006 – 2011)</strong></p>
+        </div>
+        <ul>
+          <li>Windows and Linux servers, VMware/Hyper-V migrations, backups and monitoring; earlier, web applications in Python, PHP and MySQL.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="lab" id="lab" aria-labelledby="lab-title">
     <div class="wrap grid">
       <div>
-        <h2 id="app-title">PM1 Home Assistant</h2>
-        <p>A personal Google app. I am its only user, and it is not offered to anyone else.</p>
-        <a class="button" href="/privacy.html">Read the privacy policy</a>
+        <h2 id="lab-title">Home Lab: PM1</h2>
+        <p class="lead">A small-scale copy of enterprise design, run as code and operated by AI agents.</p>
       </div>
       <ul>
-        <li><strong>Backs up my Home Assistant</strong><span>Copies my Home Assistant backups to my own Google Drive.</span></li>
-        <li><strong>Backs up my notes server</strong><span>Copies the encrypted backups of my personal notes server to my own Google Drive. The app sees only the files it made.</span></li>
-        <li><strong>Runs my thermostat</strong><span>Shows and changes my Nest thermostat from Home Assistant.</span></li>
+        <li>Proxmox virtualization on a Dell R630; Cisco C1000 routed core; SonicWall at the edge; pfSense enforcing east-west segmentation (IoT, work, agents).</li>
+        <li>Cisco 9800-CL wireless controller; Samba Active Directory and Kea DHCP on Debian.</li>
+        <li>Ansible config backups of every network device into git, on a schedule, with safety gates.</li>
+        <li>A fleet of Claude Code AI agents, each on its own VM, with least-privilege access and work tracked as tickets in Gitea.</li>
+        <li>Home Assistant smart home on an isolated IoT network.</li>
+        <li>This website: built by my AI agent, kept in Gitea, published to GitHub Pages.</li>
       </ul>
     </div>
   </section>
 
-  <section class="wrap later" aria-labelledby="later-title">
-    <h2 id="later-title">More soon</h2>
-    <p>About me, my resume and the projects in my home lab will be added here.</p>
+  <section class="section skills" id="skills" aria-labelledby="skills-title">
+    <div class="wrap">
+      <h2 id="skills-title">Skills</h2>
+      <dl>
+        <div class="row"><dt>Networking</dt><dd>Cisco Nexus/Catalyst, Meraki, routing and switching, firewalls, VPN, wireless</dd></div>
+        <div class="row"><dt>Systems</dt><dd>VMware vSphere/Horizon, Proxmox, Windows Server, Active Directory, Entra ID, Microsoft 365, Linux</dd></div>
+        <div class="row"><dt>Automation &amp; AI</dt><dd>Ansible, PowerShell, Bash, Git, REST APIs (Meraki, Microsoft Graph), Claude Code</dd></div>
+        <div class="row"><dt>Storage &amp; backup</dt><dd>HPE Nimble, Veeam, ExaGrid</dd></div>
+      </dl>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-title">
+    <div class="wrap">
+      <h2 id="contact-title">Contact</h2>
+      <a class="mail" href="mailto:patrick@patm1.com">patrick@patm1.com</a>
+      <p><a href="https://www.linkedin.com/in/patmagpantay">linkedin.com/in/patmagpantay</a></p>
+    </div>
   </section>
 </main>
 
-<footer class="close">
+<footer class="close" id="app">
   <div class="wrap">
     <p class="name">patm1</p>
-    <p><a href="/privacy.html">Privacy policy</a> · No cookies, no tracking.</p>
+    <p>PM1 Home Assistant is my personal Google app: it backs up my Home Assistant and my notes server to my own Google Drive and runs my Nest thermostat. I am its only user. <a href="/privacy.html">Privacy policy</a> · No cookies, no tracking.</p>
   </div>
 </footer>
 </body>
