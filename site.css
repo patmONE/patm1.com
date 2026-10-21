@@ -35,6 +35,7 @@ h1, h2, h3 { margin: 0; font-weight: 800; }
 .bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px 24px; padding-block: 24px; }
 .bar .mark { font-weight: 800; text-decoration: none; }
 .bar nav { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+@media (max-width: 480px) { .bar nav { gap: 8px 16px; font-size: 17px; } }
 .bar nav a { text-decoration: none; color: var(--ink-2); }
 .bar nav a:hover { color: var(--accent); }
 
@@ -47,12 +48,12 @@ h1, h2, h3 { margin: 0; font-weight: 800; }
 .hero blockquote b { color: var(--ink); font-weight: 700; }
 
 .status { margin-top: clamp(56px, 8vw, 112px); background: var(--surface); }
-.status dl { margin: 0; display: grid; grid-template-columns: repeat(2, 1fr); }
+.status dl { margin: 0; padding-inline: 0; display: grid; grid-template-columns: repeat(2, 1fr); }
 @media (min-width: 900px) { .status dl { grid-template-columns: repeat(4, 1fr); } }
 .status div { padding: 28px var(--margin); }
 .status div:nth-child(even) { background: var(--surface-2); }
 .status dt { color: var(--ink-2); font-size: 16px; }
-.status dd { margin: 4px 0 0; font-size: clamp(32px, 4vw, 56px); line-height: 1; font-weight: 800; letter-spacing: -0.03em; }
+.status dd { white-space: nowrap; margin: 4px 0 0; font-size: clamp(32px, 4vw, 56px); line-height: 1; font-weight: 800; letter-spacing: -0.03em; }
 .status dd span { display: inline-block; width: 0.3em; height: 0.3em; margin-right: 0.25em; vertical-align: 0.25em; background: var(--accent); border-radius: 50%; }
 
 /* Section headings. */
