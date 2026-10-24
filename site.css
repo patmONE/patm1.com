@@ -1,17 +1,28 @@
-/* patm1.com home page (Phase 2). Dark, one typeface (the system face), one ground,
-   one ink, one accent. privacy.html keeps its own style.css, unchanged. */
+/* patm1.com, every page. One typeface (the system face), one ground, one ink, one accent.
+   Light by default; dark when the visitor's device asks for it. */
 :root {
-  color-scheme: dark;
-  --ground: #0b0f0e;
-  --surface: #121917;
-  --surface-2: #19221f;
-  --ink: #e7eeeb;
-  --ink-2: #a3b1ac;
-  --accent: #37d391;
-  --on-accent: #06110c;
+  color-scheme: light dark;
+  --ground: #eef2f0;
+  --surface: #e2e8e5;
+  --surface-2: #d6dedb;
+  --ink: #101816;
+  --ink-2: #3c4a46;
+  --accent: #0a5c45;
+  --on-accent: #ffffff;
   --margin: clamp(16px, 4vw, 40px);
   --gap: clamp(96px, 12vw, 192px);
   --face: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ground: #0b0f0e;
+    --surface: #121917;
+    --surface-2: #19221f;
+    --ink: #e7eeeb;
+    --ink-2: #a3b1ac;
+    --accent: #37d391;
+    --on-accent: #06110c;
+  }
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -82,6 +93,7 @@ h1, h2, h3 { margin: 0; font-weight: 800; }
 .lab .lead { margin: 24px 0 0; font-size: clamp(20px, 2vw, 28px); line-height: 1.35; font-weight: 700; max-width: 26ch; }
 .lab ul { margin: 0; padding-left: 1.1em; display: grid; gap: 14px; font-size: 19px; }
 .lab a { color: inherit; }
+.lab :focus-visible { outline-color: var(--on-accent); }
 
 /* Skills: four rows, the area on the left. */
 .skills dl { margin: 0; display: grid; gap: 0; }
@@ -103,3 +115,12 @@ h1, h2, h3 { margin: 0; font-weight: 800; }
 .close { background: var(--surface); padding-block: 48px 32px; }
 .close .name { margin: 0; font-size: clamp(64px, 17vw, 272px); line-height: 0.85; letter-spacing: -0.05em; font-weight: 800; }
 .close p { margin: 20px 0 0; color: var(--ink-2); font-size: 16px; max-width: 80ch; }
+
+/* Privacy policy: a reading page. */
+.doc { padding-block: clamp(48px, 8vw, 120px) var(--gap); }
+.doc h1 { font-size: clamp(44px, 7vw, 104px); line-height: 0.95; letter-spacing: -0.04em; }
+.doc .lead { margin: 32px 0 0; font-size: clamp(20px, 2vw, 26px); line-height: 1.4; max-width: 40ch; }
+.doc section { margin-top: 72px; max-width: 68ch; }
+.doc h2 { margin: 0 0 16px; font-size: clamp(24px, 2.6vw, 32px); line-height: 1.15; letter-spacing: -0.015em; }
+.doc p, .doc li { margin: 0 0 12px; }
+.doc ul { padding-left: 1.2em; margin: 0; }
