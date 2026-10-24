@@ -15,6 +15,7 @@
 <meta property="og:title" content="Patrick Magpantay · Network Architect">
 <meta property="og:description" content="Patrick Magpantay, Network Architect: infrastructure, automation and reliability.">
 <link rel="stylesheet" href="/site.css">
+<script src="/map.js" defer></script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -133,6 +134,46 @@
         <li>Home Assistant smart home on an isolated IoT network.</li>
         <li>This website: plain HTML and CSS, kept in Gitea, published to GitHub Pages.</li>
       </ul>
+    </div>
+    <div class="wrap">
+      <figure class="map" data-map>
+        <svg class="map-wide" viewBox="0 0 960 360" role="img" aria-labelledby="map-title map-desc">
+          <title id="map-title">Home lab network map</title>
+          <desc id="map-desc">Outbound path from the Agents segment through pfSense, the Cisco C1000 routed core and SonicWall at the edge to the internet. The core is also the gateway for Clients and Servers. pfSense enforces the IoT, Work VPN and Agents segments.</desc>
+          <g class="links">
+            <path d="M160 180 H200 M340 180 H380 M520 180 H550 V60 H580 M550 180 V130 H580 M550 180 V260 H580 M720 260 H760 V200 H800 M760 260 H800 M760 260 V320 H800"/>
+          </g>
+          <path class="route" d="M870 320 H760 V260 H550 V180 H90"/>
+          <g class="node" data-node="internet"><rect x="20" y="156" width="140" height="48"/><text x="90" y="186">Internet</text></g>
+          <g class="node" data-node="sonicwall"><rect x="200" y="156" width="140" height="48"/><text x="270" y="186">SonicWall</text></g>
+          <g class="node" data-node="core"><rect x="380" y="156" width="140" height="48"/><text x="450" y="186">C1000 core</text></g>
+          <g class="node" data-node="clients"><rect x="580" y="36" width="140" height="48"/><text x="650" y="66">Clients</text></g>
+          <g class="node" data-node="servers"><rect x="580" y="106" width="140" height="48"/><text x="650" y="136">Servers</text></g>
+          <g class="node" data-node="pfsense"><rect x="580" y="236" width="140" height="48"/><text x="650" y="266">pfSense</text></g>
+          <g class="node" data-node="iot"><rect x="800" y="176" width="140" height="48"/><text x="870" y="206">IoT</text></g>
+          <g class="node" data-node="work"><rect x="800" y="236" width="140" height="48"/><text x="870" y="266">Work VPN</text></g>
+          <g class="node" data-node="agents"><rect x="800" y="296" width="140" height="48"/><text x="870" y="326">Agents</text></g>
+        </svg>
+        <svg class="map-tall" viewBox="0 0 360 456" role="img" aria-labelledby="map-title-tall map-desc-tall">
+          <title id="map-title-tall">Home lab network map</title>
+          <desc id="map-desc-tall">Outbound path from the Agents segment through pfSense, the Cisco C1000 routed core and SonicWall at the edge to the internet. The core is also the gateway for Clients and Servers. pfSense enforces the IoT, Work VPN and Agents segments.</desc>
+          <g class="links">
+            <path d="M180 60 V96 M180 140 V176 M180 220 V250 H62 V276 M180 250 V276 M180 250 H298 V276 M298 320 V360 H62 V396 M180 360 V396 M298 360 V396"/>
+          </g>
+          <path class="route" d="M298 418 V250 H180 V38"/>
+          <g class="node" data-node="internet"><rect x="105" y="16" width="150" height="44"/><text x="180" y="43">Internet</text></g>
+          <g class="node" data-node="sonicwall"><rect x="105" y="96" width="150" height="44"/><text x="180" y="123">SonicWall</text></g>
+          <g class="node" data-node="core"><rect x="105" y="176" width="150" height="44"/><text x="180" y="203">C1000 core</text></g>
+          <g class="node" data-node="clients"><rect x="10" y="276" width="104" height="44"/><text x="62" y="303">Clients</text></g>
+          <g class="node" data-node="servers"><rect x="128" y="276" width="104" height="44"/><text x="180" y="303">Servers</text></g>
+          <g class="node" data-node="pfsense"><rect x="246" y="276" width="104" height="44"/><text x="298" y="303">pfSense</text></g>
+          <g class="node" data-node="iot"><rect x="10" y="396" width="104" height="44"/><text x="62" y="423">IoT</text></g>
+          <g class="node" data-node="work"><rect x="128" y="396" width="104" height="44"/><text x="180" y="423">Work VPN</text></g>
+          <g class="node" data-node="agents"><rect x="246" y="396" width="104" height="44"/><text x="298" y="423">Agents</text></g>
+        </svg>
+        <figcaption>My lab, from the internet edge to each segment. Tap a device.</figcaption>
+        <p class="map-info" aria-live="polite" data-map-info></p>
+      </figure>
     </div>
   </section>
 

@@ -107,6 +107,26 @@ h1, h2, h3 { margin: 0; font-weight: 800; text-wrap: balance; }
 .lab a { color: inherit; }
 .lab :focus-visible { outline-color: var(--on-accent); }
 
+/* Network map: drawn in the field's own two colours. Wide on desktop, tall on a phone. */
+.map { margin: clamp(56px, 7vw, 96px) 0 0; }
+.map svg { display: block; width: 100%; height: auto; }
+.map-wide { display: none; }
+.map-tall { max-width: 520px; }
+@media (min-width: 960px) { .map-wide { display: block; } .map-tall { display: none; } }
+.map .links path { fill: none; stroke: var(--on-accent); stroke-width: 3; }
+.map .route { fill: none; stroke: none; }
+.map .node rect { fill: var(--on-accent); }
+.map .node text { fill: var(--accent); font: 700 18px var(--face); text-anchor: middle; }
+.map-tall .node text { font-size: 15px; }
+.map .packet { fill: var(--ink); }
+.map[data-live] .node { cursor: pointer; }
+.map .node:focus { outline: none; }
+.map .node:focus-visible rect { stroke: var(--ink); stroke-width: 4; }
+.map .node.is-on rect, .map[data-live] .node:hover rect { fill: var(--ink); }
+.map .node.is-on text, .map[data-live] .node:hover text { fill: var(--ground); }
+.map figcaption { margin-top: 24px; font-weight: 700; }
+.map-info { margin: 8px 0 0; min-height: 3.1em; max-width: 60ch; }
+
 /* Skills: four rows, the area on the left. */
 .skills dl { margin: 0; display: grid; gap: 0; }
 .skills .row { display: grid; grid-template-columns: 1fr; gap: 4px 64px; padding: 24px var(--margin); margin-inline: calc(var(--margin) * -1); }
