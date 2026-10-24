@@ -50,6 +50,11 @@ h1, h2, h3 { margin: 0; font-weight: 800; text-wrap: balance; }
 
 .wrap { padding-inline: var(--margin); max-width: 1440px; margin-inline: auto; }
 
+/* Skip link: hidden until a keyboard user tabs to it. */
+.skip { position: absolute; left: var(--margin); top: -100px; padding: 12px 16px; background: var(--accent); color: var(--on-accent); font-weight: 700; text-decoration: none; }
+.skip:focus { top: 12px; }
+.skip:hover { color: var(--on-accent); }
+
 /* The bar: wordmark, four links. */
 .bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 12px 24px; padding-block: 24px; }
 .bar .mark { font-weight: 800; text-decoration: none; }
