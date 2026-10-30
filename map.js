@@ -6,10 +6,8 @@
   const roles = {
     internet: "Internet.",
     sonicwall: "SonicWall at the edge.",
-    core: "Cisco C1000 routed core. Gateway for Clients and Servers.",
-    clients: "Clients. Gateway: the C1000 core.",
-    servers: "Servers. Gateway: the C1000 core.",
-    pfsense: "pfSense enforces east-west policy. The C1000 core routes but can't filter traffic, so the segments that need policy sit behind pfSense.",
+    core: "Cisco C1000 routed core.",
+    pfsense: "pfSense enforces east-west policy for the IoT, Work VPN and Agents segments.",
     iot: "IoT: Home Assistant smart home on an isolated network, behind pfSense.",
     work: "Work VPN: isolated, internet-only, behind pfSense.",
     agents: "Agents: my Claude Code AI agents, each on its own VM with least-privilege access, behind pfSense.",
